@@ -1,4 +1,4 @@
-/************* your name:
+/************* your name: Henry Nguyen
 
 INSTRUCTIONS:
 Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations.
@@ -15,13 +15,19 @@ You are encouraged to improve any provided CSS by using modern units and increas
 
 /************* site defaults *************/
 body {
-  width: 950px;
-  margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
+main {
+  width: 950px;
+  margin: 0 auto;
+}
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
+.flex {
+  display: flex;
+  align-items: center;
+}
 
 /************* site-wide text styling *************/
 
@@ -41,15 +47,81 @@ body {
 
 /************* header/footer styling *************/
 
-/* TO DO:
-    - the header and footer will be the same mustard-yellow as the buttons.
-    - the header has a max height of 150px.
-    - implement a responsive navbar in the header. The icon + title should be aligned to the left with responsive spacing
-    - create a navbar for the other pages that is right aligned. apply flexbox and make sure there is no overlap at a mobile screen width
-    - there will be 25px of space between the header and main, and 50px of space between main and footer.
-    - the footer should have a max height of about 60px, have a font-weight of 200, and the text within will be centered vertically and horizontally to the browser window.
-*/
-
+header {
+  background-color: #e5af42;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 25px;
+}
+footer {
+  background-color: #e5af42;
+  height: 100px;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+header img {
+  height: 100px;
+}
+header a {
+  text-decoration: none;
+}
+header h1 {
+  color: black;
+  font-size: 28px;
+  margin-left: 25px;
+}
+.nav-buttons li {
+  display: inline;
+  margin-left: 20px;
+}
+.navbar a {
+  color: black;
+  font-size: 18px;
+  padding: 5px;
+}
+.navbar a:hover {
+  text-decoration: underline;
+  background-color: #4278e5;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger-list {
+  display: none;
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  background-color: #e5af42;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: right;
+}
+.hamburger-list.show {
+  display: block;
+}
+@media only screen and (max-width: 1000px) {
+  .nav-buttons {
+    display: none;
+  }
+  .hamburger-button {
+    display: block;
+  }
+}
 /************* index page *************/
 
 /* TO-DO:
