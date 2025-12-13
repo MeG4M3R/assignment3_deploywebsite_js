@@ -17,6 +17,13 @@ You are encouraged to improve any provided CSS by using modern units and increas
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  margin: 0 25px 0 25px;
+  flex: 1;
 }
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
@@ -54,25 +61,6 @@ h2 {
   background-color: #4278e5;
   color: white;
   cursor: pointer;
-}
-.about-us {
-  max-width: 600px;
-  margin-right: 50px;
-}
-@media only screen and (max-width: 1100px) {
-  .index .flex {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .about-us {
-    order: 1;
-    margin-bottom: 10px;
-  }
-  main img {
-    order: 2;
-    width: 500px;
-  }
 }
 /************* header/footer styling *************/
 header {
@@ -146,15 +134,34 @@ header a {
   }
 }
 /************* index page *************/
-
-/* TO-DO:
-    - this is a 2-column layout: text on the left, and an image on the right. The image should be have a responsive width using 300px as the approximate value. use flexbox, gap, margin, and padding to govern space around. Aim for 25-50px.
-    - the h2 on this page will have a line-height equal to the font size.
-    - each paragraph on this page will have 12px of space beneath it.
-    - each fake-button on this page will have a responsive width of about 250px.  Use flexbox to manage  space between them.
-    - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
-*/
-
+.index .flex {
+  justify-content: center;
+  margin: 0 100px 0 100px;
+}
+.index h2 {
+  line-height: 1;
+}
+.index p {
+  margin-bottom: 12px;
+}
+.about-us {
+  order: 1;
+}
+.index img {
+  order: 2;
+  width: 300px;
+  padding: 25px;
+}
+.fake-button {
+  width: 200px;
+}
+/* Using same logic as the hamburger menu to display the page as a column (instead of having responsive widths) */
+@media only screen and (max-width: 1100px) {
+  .index .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 /************* bookings page *************/
 
 /* TO-DO:
