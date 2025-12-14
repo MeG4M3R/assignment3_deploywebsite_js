@@ -1,5 +1,5 @@
-hamburgerButton = document.querySelector(".hamburger-button");
-hamburgerList = document.querySelector(".hamburger-list");
+const hamburgerButton = document.querySelector(".hamburger-button");
+const hamburgerList = document.querySelector(".hamburger-list");
 hamburgerButton.addEventListener("click", () => {
   hamburgerList.classList.toggle("show");
 });
