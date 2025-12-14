@@ -4,7 +4,7 @@ submitButton.addEventListener("click", () => {
   const contactPage = document.getElementById("contact-page");
   contactPage.innerHTML =
     "<h2>Thank you for your message!</h2>" +
-    "<p>Click the home below to return to the homepage.</p>";
+    '<p id="home-message">Click the home below to return to the homepage.</p>';
   const homePage = document.getElementById("home-page");
   homePage.id = "show-home-page";
   contactPage.style.fontSize = "24px";
