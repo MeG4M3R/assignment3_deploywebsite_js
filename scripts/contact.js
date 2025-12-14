@@ -1,5 +1,5 @@
 // when the "submit-button" is clicked, the contents of the contact-page are replaced with a single <p> element that reads "Thank you for your message" in size 24 font.
-submitButton = document.getElementById("submit-button");
+const submitButton = document.getElementById("submit-button");
 submitButton.addEventListener("click", () => {
   const contactPage = document.getElementById("contact-page");
   contactPage.innerHTML =
